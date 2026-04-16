@@ -1,14 +1,16 @@
 class LoaderConfig:
-    pass
+    filepath: str
 
 class SplitterConfig:
-    pass
+    chunksize: int
+    chunkoverlap: int
 
 class EmbedderConfig:
-    pass
+    model_name: str
 
 class VectorStoreConfig:
-    pass
+    folder_dir: str
+    collection_name: str
 
 class LoggerConfig:
     pass
