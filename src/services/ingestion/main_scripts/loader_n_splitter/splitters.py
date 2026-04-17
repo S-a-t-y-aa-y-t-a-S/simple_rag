@@ -1,5 +1,6 @@
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_core.documents import Document
+from collections import Iterable
 from ingestion.configs.ingestion_configs import SplitterConfig
 
 

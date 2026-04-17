@@ -1,16 +1,32 @@
-class LoaderConfig:
+from pydantic import BaseModel, Field
+from pydantic_settings import BaseSettings, SettingsConfigDict
+from configs import constants
+from pathlib import Path
+import os
+
+class BasicConfig(BaseSettings):
+    # extracting out the keys from .env file
+    yaml_file_path:str = Field(default_factory=str)
+
+    # obtaining the .env file path using Config class 
+    model_config = SettingsConfigDict(
+        env_file_path = os.path.join(Path(__file__).resolve().parent, constants.ENVIRONMENT_FILE)
+    )
+    
+
+class LoaderConfig(BaseModel):
     filepath: str
 
-class SplitterConfig:
+class SplitterConfig(BaseModel):
     chunksize: int
     chunkoverlap: int
 
-class EmbedderConfig:
-    model_name: str
+# class EmbedderConfig(BaseModel):
+#     model_name: str
 
-class VectorStoreConfig:
-    folder_dir: str
-    collection_name: str
+# class VectorStoreConfig(BaseModel):
+#     folder_dir: str
+#     collection_name: str
 
-class LoggerConfig:
-    pass
+# class LoggerConfig:
+#     pass
