@@ -1,7 +1,14 @@
 
 from ingestion.main_scripts.loader_n_splitter.loaders import Loader
-from configs.ingestion_configs import LoaderConfig
-# from constants import RAW_DATA_DIRECTORY
+from ingestion.utils.helper import Helper
 
-loader = Loader(loader_config=LoaderConfig)
+
+loader = Loader(helper=Helper())
 print(loader.pdf_loader())
+
+
+# previously calling LoaderConfig directly
+# this time via Helper class for pydantic schema validation
+# from constants import RAW_DATA_DIRECTORY
+# loader = Loader(loader_config=LoaderConfig(filepath=constants.RAW_DATA_DIRECTORY))
+# print(loader.pdf_loader())

@@ -1,6 +1,6 @@
 loader_config:
-  raw_data_directory: "/home/rik07/Documents/repos/simple_rag/knowledge_base/raw/attention.pdf"
+  filepath: "/home/rik07/Documents/repos/simple_rag/knowledge_base/raw/attention.pdf"
 
 splitter_config:
-  chunk_size: 1000
-  chunk_overlap: 200
+  chunksize: 1000
+  chunkoverlap: 200

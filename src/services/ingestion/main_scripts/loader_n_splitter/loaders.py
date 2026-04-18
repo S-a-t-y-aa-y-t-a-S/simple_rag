@@ -1,9 +1,11 @@
 from langchain_community.document_loaders import PyPDFLoader
-from ingestion.configs.ingestion_configs import LoaderConfig
+from ingestion.utils.helper import Helper
+
 
 class Loader:
-    def __init__(self, loader_config: LoaderConfig):
-        self.__filepath = loader_config.filepath
+    def __init__(self, helper: Helper):
+        self.__loader_config = helper.get_loader_config()
+        self.__filepath = self.__loader_config.filepath
     
     def pdf_loader(self):
         loader = PyPDFLoader(file_path=self.__filepath)

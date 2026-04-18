@@ -1,13 +1,14 @@
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_core.documents import Document
-from collections import Iterable
-from ingestion.configs.ingestion_configs import SplitterConfig
+from collections.abc import Iterable
+from ingestion.utils.helper import Helper
 
 
 class Splitter:
-    def __init__(self, splitter_config: SplitterConfig):
-        self.__chunksize = splitter_config.chunksize
-        self.__chunkoverlap = splitter_config.chunkoverlap
+    def __init__(self, helper: Helper):
+        self.__splitter_config = helper.get_splitter_config()
+        self.__chunksize = self.__splitter_config.chunksize
+        self.__chunkoverlap = self.__splitter_config.chunkoverlap
         
     def doc_splitter(self, documents:Iterable[Document]):
         splitter = RecursiveCharacterTextSplitter(
