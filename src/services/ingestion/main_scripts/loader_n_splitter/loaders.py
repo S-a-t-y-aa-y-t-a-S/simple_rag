@@ -1,5 +1,5 @@
 from langchain_community.document_loaders import PyPDFLoader
-from ingestion.utils.helper import Helper
+from ingestion.utils.helpers import Helper
 
 
 class Loader:

@@ -1,6 +1,6 @@
 
 from ingestion.main_scripts.loader_n_splitter.loaders import Loader
-from ingestion.utils.helper import Helper
+from ingestion.utils.helpers import Helper
 
 
 loader = Loader(helper=Helper())

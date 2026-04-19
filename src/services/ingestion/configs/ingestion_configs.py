@@ -17,6 +17,7 @@ class BasicConfig(BaseSettings):
 class LoaderConfig(BaseModel):
     filepath: str
 
+
 class SplitterConfig(BaseModel):
     chunksize: int
     chunkoverlap: int

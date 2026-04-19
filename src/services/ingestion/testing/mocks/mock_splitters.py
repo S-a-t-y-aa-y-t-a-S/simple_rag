@@ -1,6 +1,6 @@
 
 from ingestion.main_scripts.loader_n_splitter.splitters import Splitter
-from ingestion.utils.helper import Helper
+from ingestion.utils.helpers import Helper
 from .. import constants
 
 splitter = Splitter(
