@@ -22,8 +22,9 @@ class SplitterConfig(BaseModel):
     chunksize: int
     chunkoverlap: int
 
-# class EmbedderConfig(BaseModel):
-#     model_name: str
+
+class EmbedderConfig(BaseModel):
+    embedding_model_name: str
 
 # class VectorStoreConfig(BaseModel):
 #     folder_dir: str

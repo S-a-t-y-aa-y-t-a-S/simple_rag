@@ -33,6 +33,13 @@ class Helper:
             section_name=constants.SPLITTER_CONFIG_KEY,
             section_class=ingestion_configs.SplitterConfig
         )
+    
+    def get_embedder_config(self):
+        return self.load_section(
+            section_name=constants.EMBEDDER_CONFIG_KEY,
+            section_class=ingestion_configs.EmbedderConfig
+        )
+        
 
 
 
