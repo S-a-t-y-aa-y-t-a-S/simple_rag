@@ -1,6 +1,6 @@
 from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_core.documents import Document
-from utils.helpers import Helper
+from ingestion.utils.helpers import Helper
 
 
 class ChunkEmbedder:
@@ -16,5 +16,5 @@ class ChunkEmbedder:
 
     def get_embeddings(self, document_chunks: list[Document]):
         doc_chunk_page_content = self.get_doc_content(document_chunks=document_chunks)
-        return self.__embedding.aembed_documents(texts=doc_chunk_page_content)
+        return self.__embedding.embed_documents(texts=doc_chunk_page_content)
         

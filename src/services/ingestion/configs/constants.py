@@ -12,7 +12,7 @@ DEFAULT_BOOL_VALUE=True
 # keys present in yaml
 LOADER_CONFIG_KEY="loader_config"
 SPLITTER_CONFIG_KEY="splitter_config"
-EMBEDDER_CONFIG_KEY="embedder_config"
-VECTOR_STORE_CONFIG_KEY="vector_store_config"
+EMBEDDER_CONFIG_KEY="chunk_embedder_config"
+STORAGE_CONFIG_KEY="vector_store_config"
 
 

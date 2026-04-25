@@ -39,6 +39,11 @@ class Helper:
             section_name=constants.EMBEDDER_CONFIG_KEY,
             section_class=ingestion_configs.EmbedderConfig
         )
+    
+    def get_storage_config(self):
+        return self.load_section(
+            section_name=constants.STORAGE_CONFIG_KEY
+        )
         
 
 
