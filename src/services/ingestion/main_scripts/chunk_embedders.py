@@ -7,7 +7,11 @@ class ChunkEmbedder:
     def __init__(self, helper: Helper):
         self.__chunk_embedding_config = helper.get_embedder_config()
         self.__model_name = self.__chunk_embedding_config.embedding_model_name
-        self.__embedding = HuggingFaceEmbeddings(model_name = self.__model_name)
+        self.__embedding_function = HuggingFaceEmbeddings(model_name = self.__model_name)
+
+    
+    # def get_embedding_function(self):
+    #     return self.__embedding_function
 
 
     def get_doc_content(self, document_chunks: list[Document]):
@@ -16,5 +20,5 @@ class ChunkEmbedder:
 
     def get_embeddings(self, document_chunks: list[Document]):
         doc_chunk_page_content = self.get_doc_content(document_chunks=document_chunks)
-        return self.__embedding.embed_documents(texts=doc_chunk_page_content)
+        return self.__embedding_function.embed_documents(texts=doc_chunk_page_content)
         

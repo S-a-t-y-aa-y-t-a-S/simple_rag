@@ -26,9 +26,11 @@ class SplitterConfig(BaseModel):
 class EmbedderConfig(BaseModel):
     embedding_model_name: str
 
-# class VectorStoreConfig(BaseModel):
-#     folder_dir: str
-#     collection_name: str
+
+class VectorStoreConfig(BaseModel):
+    folder_dir: str
+    collection_name: str
+
 
 # class LoggerConfig:
 #     pass

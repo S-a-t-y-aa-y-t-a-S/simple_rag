@@ -16,3 +16,12 @@ DOC_EMBEDDING_JSON_FILE = "/home/rik07/Documents/repos/simple_rag/src/services/i
 
 DOC_CHUNKS_KEY = "doc_chunks"
 EMBEDDING_KEY = "embedding_key"
+
+
+
+# default values
+EMPTY_STRING=""
+EMPTY_DICT={}
+EMPTY_LIST=[]
+NULL_VALUE=None
+DEFAULT_BOOL_VALUE=True
