@@ -32,5 +32,7 @@ class VectorStoreConfig(BaseModel):
     collection_name: str
 
 
-# class LoggerConfig:
-#     pass
+class LoggerConfig(BaseModel):
+    target_log_file: str
+    logging_formatter: str
+    datetime_format: str

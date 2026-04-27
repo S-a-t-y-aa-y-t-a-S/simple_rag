@@ -46,6 +46,11 @@ class Helper:
             section_class=ingestion_configs.VectorStoreConfig
         )
         
+    def get_logger_config(self):
+        return self.load_section(
+            section_name=constants.LOGGER_CONFIG_KEY,
+            section_class=ingestion_configs.LoggerConfig
+        )
 
 
 

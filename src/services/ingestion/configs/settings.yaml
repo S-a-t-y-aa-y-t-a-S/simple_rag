@@ -9,6 +9,11 @@ chunk_embedder_config:
   embedding_model_name: "BAAI/bge-small-en-v1.5"
 
 vector_store_config:
-  # folder_dir: "/home/rik07/Documents/repos/simple_rag/knowledge_base/indexed"
-  folder_dir: "/home/rik07/Documents/repos/simple_rag/src/services/ingestion/testing"
+  folder_dir: "/home/rik07/Documents/repos/simple_rag/knowledge_base/indexed"
+  # folder_dir: "/home/rik07/Documents/repos/simple_rag/src/services/ingestion/testing/vector_db"
   collection_name: "chroma_collection_01"
+
+logger_config:
+  target_log_file: "/home/rik07/Documents/repos/simple_rag/src/services/ingestion/logs/ingestion_pipeline.log"
+  logging_formatter: "TIME=%(asctime)s LEVEL=%(levelname)s PATH=%(pathname)s LINE_NUMBER=%(lineno)d MESSAGE=%(message)s"
+  datetime_format: "%Y-%m-%d %H:%M:%S"

@@ -25,3 +25,7 @@ EMPTY_DICT={}
 EMPTY_LIST=[]
 NULL_VALUE=None
 DEFAULT_BOOL_VALUE=True
+
+
+SUCCESSFUL=" stage is successful"
+NOT_SUCCESSFUL=" stage is not successful"
