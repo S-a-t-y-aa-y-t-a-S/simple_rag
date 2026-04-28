@@ -4,17 +4,19 @@ from logging.handlers import RotatingFileHandler
 from ingestion.utils.helpers import Helper
 
 
-class Logger:
+class LoggerDef:
 
     def __init__(self, helper: Helper):
 
         self.__logger_config = helper.get_logger_config()
-        self.__root_logger.setLevel(level=logging.DEBUG)
+        self.__root_logger = logging.getLogger()
         self.__log_file = self.__logger_config.target_log_file
         self.__logging_formatter = logging.Formatter(
             fmt=self.__logger_config.logging_formatter,
             datefmt=self.__logger_config.datetime_format
         )
+
+        self.__root_logger.setLevel(level=logging.DEBUG)
 
 
     def get_loggers(self):
