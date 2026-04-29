@@ -1,0 +1,2 @@
+shall contain a set of .yml files for prod, dev. 
+a dedicated .dockerignore file shall also be present

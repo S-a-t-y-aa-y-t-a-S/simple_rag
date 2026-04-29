@@ -1,3 +1,5 @@
 envs/
 .env
 __pycache__/
+settings.yaml
+testing/constants.py
