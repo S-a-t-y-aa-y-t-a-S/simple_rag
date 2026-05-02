@@ -1,8 +1,7 @@
-from ingestion.utils.helpers import Helper
-from ingestion.src.chunk_embedders import ChunkEmbedder
+from utils.helpers import Helper
+from src.chunk_embedders import ChunkEmbedder
 from langchain_chroma import Chroma
 from langchain_core.documents import Document
-from ingestion.utils.helpers import Helper
 
 
 class VectorStore (ChunkEmbedder):

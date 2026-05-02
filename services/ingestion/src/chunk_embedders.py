@@ -1,6 +1,6 @@
 from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_core.documents import Document
-from ingestion.utils.helpers import Helper
+from utils.helpers import Helper
 
 
 class ChunkEmbedder:

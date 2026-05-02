@@ -1,4 +1,4 @@
-from ingestion.configs import constants, ingestion_configs
+from configs import constants, ingestion_configs
 import yaml
 
 class Helper:
@@ -50,6 +50,12 @@ class Helper:
         return self.load_section(
             section_name=constants.LOGGER_CONFIG_KEY,
             section_class=ingestion_configs.LoggerConfig
+        )
+    
+    def get_api_config(self):
+        return self.load_section(
+            section_name=constants.API_CONFIG_KEY,
+            section_class=ingestion_configs.APIConfig
         )
 
 

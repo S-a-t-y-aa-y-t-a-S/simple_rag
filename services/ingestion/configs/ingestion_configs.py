@@ -36,3 +36,10 @@ class LoggerConfig(BaseModel):
     target_log_file: str
     logging_formatter: str
     datetime_format: str
+
+
+class APIConfig(BaseModel):
+    base_url: str
+    endpoint: str
+    swagger_ui_tag: str
+    return_statement: str
