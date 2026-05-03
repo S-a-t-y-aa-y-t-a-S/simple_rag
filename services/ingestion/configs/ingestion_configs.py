@@ -42,4 +42,12 @@ class APIConfig(BaseModel):
     base_url: str
     endpoint: str
     swagger_ui_tag: str
-    return_statement: str
+    
+
+class ReturnConfig(BaseModel):
+    ingestion: str
+
+
+class ExceptionConfig(BaseModel):
+    finding_file: str
+    saving_file: str

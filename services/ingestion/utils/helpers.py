@@ -57,7 +57,17 @@ class Helper:
             section_name=constants.API_CONFIG_KEY,
             section_class=ingestion_configs.APIConfig
         )
+    
+    def get_return_config(self):
+        return self.load_section(
+            section_name=constants.RETURN_CONFIG_KEY,
+            section_class=ingestion_configs.ReturnConfig
+        )
 
-
+    def get_exception_config(self):
+        return self.load_section(
+            section_name=constants.EXCEPTION_CONFIG_KEY,
+            section_class=ingestion_configs.ExceptionConfig
+        )
 
         
