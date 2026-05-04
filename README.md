@@ -1,5 +1,5 @@
 ## Weekly Sprint logs
-### Sprint 1: 
+### Sprint 1: Core Ingestion Testing (Week 1 - May 2026)
 - **Jira Epic:** INGEST-1 Ingestion Service Architecture
 **Sprint Summary Wins:**
 - [To be filled at the end of the week]
@@ -9,9 +9,9 @@
 #### Daily Standup Records (Click to expand)
 <details>
 <summary><b>Day 1 (4 May 2026)</b></summary>
-* **Objective:** resolve error code number 422 in Postman 
-* **Wins:** successfully implemented the Ingestion Service by copying the cURL section mentioned in response field in Swagger UI and importing into Postman
-* **Blockages:** went through the form data, checking the keys and uploaded file size,
+* <b>Objective:</b><br>resolve error code number 422 in Postman<br> 
+* <b>Wins:</b><br>successfully implemented the Ingestion Service by copying the cURL section mentioned in response field in Swagger UI and importing into Postman<br>
+* <b>Blockages:</b><br>went through the form data, checking the keys and uploaded file size,
 made sure path is correct, tested the complete ingestion pipeline in Swagger UI
 </details>
 
