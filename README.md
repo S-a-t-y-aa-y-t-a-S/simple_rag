@@ -8,7 +8,7 @@
 ---
 #### Daily Standup Records (Click to expand)
 <details>
-<summary><b>Day 1 (4 May 2026)</b></summary>
+<summary><b>Day 1 (7 May 2026)</b></summary>
 * <b>Objective:</b><br>resolve error code number 422 in Postman<br> 
 * <b>Wins:</b><br>successfully implemented the Ingestion Service by copying the cURL section mentioned in response field in Swagger UI and importing into Postman<br>
 * <b>Blockages:</b><br>went through the form data, checking the keys and uploaded file size,
