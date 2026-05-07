@@ -1,6 +1,6 @@
 ## Weekly Sprint logs
 ### Sprint 1: Core Ingestion Testing (Week 1 - May 2026)
-- **Jira Epic:** INGEST-1 Ingestion Service Architecture
+- **Jira Epic:** RAG-1 Ingestion Service Architecture
 **Sprint Summary Wins:**
 - [To be filled at the end of the week]
 **Sprint Summary Blockages:**
