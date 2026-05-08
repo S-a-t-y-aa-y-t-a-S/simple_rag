@@ -8,13 +8,13 @@
 ---
 #### Daily Standup Records (Click to expand)
 <details>
-<summary><b>Day 2 (8 May 2026)</b></summary>
+<summary><b>Day 2 (8th May 2026)</b></summary>
 * <b>Objective:</b><br>deciding the structure and request-response flow between gateway and ingestion services<br> 
 * <b>Wins:</b><br>finished finalizing the core flow between the services (made a rough plan)<br>
 * <b>Blockages:</b><br>need to implement in the jupyter notebook in a monolithic manner just to analyze the mechanism between the services
 </details>
 <details>
-<summary><b>Day 1 (7 May 2026)</b></summary>
+<summary><b>Day 1 (7th May 2026)</b></summary>
 * <b>Objective:</b><br>resolve error code number 422 in Postman<br> 
 * <b>Wins:</b><br>successfully implemented the Ingestion Service by copying the cURL section mentioned in response field in Swagger UI and importing into Postman<br>
 * <b>Blockages:</b><br>went through the form data, checking the keys and uploaded file size,
