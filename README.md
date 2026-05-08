@@ -10,7 +10,7 @@
 <details>
 <summary><b>Day 2 (8 May 2026)</b></summary>
 * <b>Objective:</b><br>deciding the structure and request-response flow between gateway and ingestion services<br> 
-* <b>Wins:</b><br>finished finalizing the core flow between the services<br>
+* <b>Wins:</b><br>finished finalizing the core flow between the services (made a rough plan)<br>
 * <b>Blockages:</b><br>need to implement in the jupyter notebook in a monolithic manner just to analyze the mechanism between the services
 </details>
 <details>
