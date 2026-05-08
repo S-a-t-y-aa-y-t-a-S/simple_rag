@@ -1,6 +1,6 @@
 ## Weekly Sprint logs
 ### Sprint 1: Core Ingestion Testing (Week 1 - May 2026)
-- **Jira Epic:** INGEST-1 Ingestion Service Architecture
+- **Jira Epic:** RAG-1 Ingestion Service Architecture and Gateway
 **Sprint Summary Wins:**
 - [To be filled at the end of the week]
 **Sprint Summary Blockages:**
@@ -8,13 +8,18 @@
 ---
 #### Daily Standup Records (Click to expand)
 <details>
+<summary><b>Day 2 (8 May 2026)</b></summary>
+* <b>Objective:</b><br>deciding the structure and request-response flow between gateway and ingestion services<br> 
+* <b>Wins:</b><br>finished finalizing the core flow between the services<br>
+* <b>Blockages:</b><br>need to implement in the jupyter notebook in a monolithic manner just to analyze the mechanism between the services
+</details>
+<details>
 <summary><b>Day 1 (7 May 2026)</b></summary>
 * <b>Objective:</b><br>resolve error code number 422 in Postman<br> 
 * <b>Wins:</b><br>successfully implemented the Ingestion Service by copying the cURL section mentioned in response field in Swagger UI and importing into Postman<br>
 * <b>Blockages:</b><br>went through the form data, checking the keys and uploaded file size,
 made sure path is correct, tested the complete ingestion pipeline in Swagger UI
 </details>
-
 
 ## Project History & Evolution
 ### Sprint 0: The Architectural Pivot (mid-March to early May 2026)
