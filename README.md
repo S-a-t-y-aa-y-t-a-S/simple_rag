@@ -17,7 +17,7 @@
 <summary><b>Day 1 (7th May 2026)</b></summary>
 * <b>Objective:</b><br>resolve error code number 422 in Postman<br> 
 * <b>Wins:</b><br>successfully implemented the Ingestion Service by copying the cURL section mentioned in response field in Swagger UI and importing into Postman<br>
-* <b>Blockages:</b><br>went through the form data, checking the keys and uploaded file size,
+* <b>Blockages:</b><br>Went through the form data, checking the keys and uploaded file size,
 made sure path is correct, tested the complete ingestion pipeline in Swagger UI
 </details>
 
