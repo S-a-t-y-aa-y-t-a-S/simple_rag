@@ -1,10 +1,25 @@
 ## Weekly Sprint logs
-### Sprint 1: Core Ingestion Testing (Week 1 - May 2026)
-- **Jira Epic:** RAG-1 Ingestion Service Architecture and Gateway
+
+### Sprint 2: Gateway service designing skeleton (Week 1 - May 2026)
+- **Jira Epic:** RAG-1 gateway notebook
 **Sprint Summary Wins:**
-- [To be filled at the end of the week]
+- [to be filled by weekend]
 **Sprint Summary Blockages:**
-- [To be filled at the end of the week]
+- [to be filled by weekend]
+---
+#### Daily Standup Records (Click to expand)
+<details>
+<summary><b>Day 1 (11 May 2026)</b></summary>
+* <b>Objective:</b><br>creation of gateway skeleton in notebook<br> 
+* <b>Wins:</b><br>designed a pipelines<br>to connect gateway to ingestion service<br>jupyter notebook has its own server running, so uvicorn.config(), nested_asyncio.apply() were used. asyncio.get_event_loop() tells uvicorn to use the same server as jupyter notebook<br> 
+* <b>Blockages:</b><br>recieving http exception for it is not able to return vector embedding ids of the doc chunks while calling ingestion service to gateway
+</details>
+
+### Sprint 1: Core Ingestion Testing (Week 1 - May 2026)
+**Sprint Summary Wins:**
+- successully tested and executed ingestion pipeline 
+**Sprint Summary Blockages:**
+- need to connect ingestion service to gateway service
 ---
 #### Daily Standup Records (Click to expand)
 <details>
