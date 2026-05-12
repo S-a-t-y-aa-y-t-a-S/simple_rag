@@ -5,7 +5,7 @@ from utils.helpers import Helper
 from api.schemas.ingestion_schema import IngestionResponse
 from utils.utils import file_handling
 from fastapi import APIRouter, status, UploadFile, File, HTTPException
-from configs import constants
+from typing import Optional
 import os
 
 helper = Helper()
@@ -23,10 +23,11 @@ splitter = Splitter(helper=helper)
 
 
 @ingest.post(path=api_config.base_url, status_code=status.HTTP_201_CREATED, response_model=IngestionResponse)
-def ingest_doc(uploaded_file: UploadFile = File(...)):
+def ingest_doc(uploaded_file: UploadFile|str = File(...)):
 
     file_path = file_handling(uploaded_file=uploaded_file, exception_config=exception_config)
-    print(file_path)
+
+    # print(file_path)
 
     # return {
     #     "path": file_path
