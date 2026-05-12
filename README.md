@@ -9,6 +9,13 @@
 ---
 #### Daily Standup Records (Click to expand)
 <details>
+<summary><b>Day 2 (12 May 2026)</b></summary>
+* <b>Objective:</b><br>resolving 404 exception<br> 
+* <b>Wins:</b><br>the basic skeleton is ready<br>
+* <b>Blockages:</b><br>the ingestion api already accepts param of type UploadFile<br>
+While passing the payload i am wrapping around a pydantic schema due to which i am facing json serializable error<br>i should have converted the pydantic object to json string first before passing it using AsyncClient.post()
+</details>
+<details>
 <summary><b>Day 1 (11 May 2026)</b></summary>
 * <b>Objective:</b><br>creation of gateway skeleton in notebook<br> 
 * <b>Wins:</b><br>designed a pipelines<br>to connect gateway to ingestion service<br>jupyter notebook has its own server running, so uvicorn.config(), nested_asyncio.apply() were used. asyncio.get_event_loop() tells uvicorn to use the same server as jupyter notebook<br> 
