@@ -32,6 +32,10 @@ def ingest_doc(uploaded_file: UploadFile|str = File(...)):
     # return {
     #     "path": file_path
     # }
+    pass
+
+@ingest.post(path=api_config.base_url, status_code=status.HTTP_201_CREATED, response_model=IngestionResponse)
+def ingest_doc(file_path: str):
 
     if os.path.exists(file_path):
         print(file_path)
@@ -40,7 +44,7 @@ def ingest_doc(uploaded_file: UploadFile|str = File(...)):
         storage = VectorStore(helper=helper)
         storage.store_embeddings(doc_chunks=doc_chunks)
 
-        os.remove(file_path)
+        # os.remove(file_path)
 
     else:
         raise HTTPException(
