@@ -9,6 +9,12 @@
 ---
 #### Daily Standup Records (Click to expand)
 <details>
+<summary><b>Day 3 (13 May 2026)</b></summary>
+* <b>Objective:</b><br>resolving interservice communication issue<br> 
+* <b>Wins:</b><br>realized that notebook is always necessary. it is quite heavy<br>
+* <b>Blockages:</b><br>gateway service is not able to get in touch with ingestion service via httpx
+</details>
+<details>
 <summary><b>Day 2 (12 May 2026)</b></summary>
 * <b>Objective:</b><br>resolving 404 exception<br> 
 * <b>Wins:</b><br>the basic skeleton is ready<br>
