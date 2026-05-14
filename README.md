@@ -1,13 +1,8 @@
 ## Weekly Sprint logs
-<<<<<<< HEAD
 
 ### Sprint 2: Gateway service designing skeleton (Week 1 - May 2026)
-- **Jira Epic:** RAG-1 gateway notebook
+**Jira Epic:** RAG-1 gateway notebook
 
-=======
-### Sprint 1: Core Ingestion Testing (Week 1 - May 2026)
-- **Jira Epic:** RAG-1 Ingestion Service Architecture
->>>>>>> 828887c99b91c15a3cac8895c12f02bf32d74990
 **Sprint Summary Wins:**
 - [to be filled by weekend]
 
