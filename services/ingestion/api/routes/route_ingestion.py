@@ -6,7 +6,7 @@ from api.schemas.ingestion_schema import IngestionResponse
 from utils.utils import file_handling
 from fastapi import APIRouter, status, UploadFile, File, HTTPException
 from typing import Optional
-import os
+import os, tempfile, shutil
 
 helper = Helper()
 api_config = helper.get_api_config()
@@ -23,19 +23,14 @@ splitter = Splitter(helper=helper)
 
 
 @ingest.post(path=api_config.base_url, status_code=status.HTTP_201_CREATED, response_model=IngestionResponse)
-def ingest_doc(uploaded_file: UploadFile|str = File(...)):
+async def ingest_doc(uploaded_file: UploadFile = File(...)):
 
-    file_path = file_handling(uploaded_file=uploaded_file, exception_config=exception_config)
+    # file_path = file_handling(uploaded_file=uploaded_file, exception_config=exception_config)
+    await uploaded_file.seek(offset=0)
 
-    # print(file_path)
-
-    # return {
-    #     "path": file_path
-    # }
-    pass
-
-@ingest.post(path=api_config.base_url, status_code=status.HTTP_201_CREATED, response_model=IngestionResponse)
-def ingest_doc(file_path: str):
+    with tempfile.NamedTemporaryFile(delete=False, suffix=f"_{uploaded_file.filename}") as temp_file:
+        shutil.copyfileobj(uploaded_file.file, temp_file)
+        file_path = temp_file.name
 
     if os.path.exists(file_path):
         print(file_path)
@@ -44,7 +39,7 @@ def ingest_doc(file_path: str):
         storage = VectorStore(helper=helper)
         storage.store_embeddings(doc_chunks=doc_chunks)
 
-        # os.remove(file_path)
+        os.remove(file_path)
 
     else:
         raise HTTPException(
