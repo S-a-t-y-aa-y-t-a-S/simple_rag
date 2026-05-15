@@ -4,7 +4,7 @@ from src.vector_stores import VectorStore
 from utils.helpers import Helper
 from api.schemas.ingestion_schema import IngestionResponse
 from utils.utils import file_handling
-from fastapi import APIRouter, status, UploadFile, File, HTTPException
+from fastapi import APIRouter, status, UploadFile, HTTPException
 from typing import Optional
 import os, tempfile, shutil
 
@@ -23,7 +23,7 @@ splitter = Splitter(helper=helper)
 
 
 @ingest.post(path=api_config.base_url, status_code=status.HTTP_201_CREATED, response_model=IngestionResponse)
-async def ingest_doc(uploaded_file: UploadFile = File(...)):
+async def ingest_doc(uploaded_file: UploadFile):
 
     # file_path = file_handling(uploaded_file=uploaded_file, exception_config=exception_config)
     await uploaded_file.seek(offset=0)

@@ -1,19 +1,21 @@
+# make sure to change the stated directories to absolute file path as per your machine 
+
 loader_config:
-  filepath: "./simple_rag/knowledge_base/raw/attention.pdf"
+  filepath: "knowledge_base/raw/attention.pdf"
 
 splitter_config:
-  chunksize: 0
-  chunkoverlap: 0
+  chunksize: 1000
+  chunkoverlap: 20
 
 chunk_embedder_config:
-  embedding_model_name: ""
+  embedding_model_name: "BAAI/bge-small-en-v1.5"
 
 vector_store_config:
-  folder_dir: "./simple_rag/knowledge_base/indexed"
+  folder_dir: "knowledge_base/indexed"
   collection_name: "chroma_collection_01"
 
 logger_config:
-  target_log_file: "./simple_rag/src/services/ingestion/logs/ingestion_pipeline.log"
+  target_log_file: "src/services/ingestion/logs/ingestion_pipeline.log"
   logging_formatter: "TIME=%(asctime)s LEVEL=%(levelname)s PATH=%(pathname)s LINE_NUMBER=%(lineno)d MESSAGE=%(message)s"
   datetime_format: "%Y-%m-%d %H:%M:%S"
 
