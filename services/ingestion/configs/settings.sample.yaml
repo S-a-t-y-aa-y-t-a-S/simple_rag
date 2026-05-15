@@ -1,0 +1,30 @@
+loader_config:
+  filepath: "./simple_rag/knowledge_base/raw/attention.pdf"
+
+splitter_config:
+  chunksize: 0
+  chunkoverlap: 0
+
+chunk_embedder_config:
+  embedding_model_name: ""
+
+vector_store_config:
+  folder_dir: "./simple_rag/knowledge_base/indexed"
+  collection_name: "chroma_collection_01"
+
+logger_config:
+  target_log_file: "./simple_rag/src/services/ingestion/logs/ingestion_pipeline.log"
+  logging_formatter: "TIME=%(asctime)s LEVEL=%(levelname)s PATH=%(pathname)s LINE_NUMBER=%(lineno)d MESSAGE=%(message)s"
+  datetime_format: "%Y-%m-%d %H:%M:%S"
+
+api_config:
+  base_url: "/"
+  endpoint: "/ingest"
+  swagger_ui_tag: "ingest"
+
+return_config:
+  ingestion: "document is ingested successfully!!"
+
+exception_config:
+  finding_file: "file not found"
+  saving_file: "exception occured while saving file"
