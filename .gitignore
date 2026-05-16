@@ -2,5 +2,4 @@ envs/
 .env
 __pycache__/
 settings.yaml
-constants.py
 logs

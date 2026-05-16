@@ -1,9 +1,9 @@
-from src.loader_n_splitter.loaders import Loader
-from src.loader_n_splitter.splitters import Splitter
-from src.vector_stores import VectorStore
-from utils.helpers import Helper
+from microservices.loader_n_splitter.loaders import Loader
+from microservices.loader_n_splitter.splitters import Splitter
+from microservices.storage.vector_stores import VectorStore
+from dependencies.helpers import Helper
 from api.schemas.ingestion_schema import IngestionResponse
-from utils.utils import file_handling
+from utils import file_handling
 from fastapi import APIRouter, status, UploadFile, HTTPException
 from typing import Optional
 import os, tempfile, shutil

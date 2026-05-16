@@ -11,6 +11,12 @@
 ---
 #### Daily Standup Records (Click to expand)
 <details>
+<summary><b>Day 5 (15 May 2026)</b></summary>
+* <b>Objective:</b><br>refactoring ingestion folder structure<br> 
+* <b>Wins:</b><br>1) keeping the folders intuitive<br>2) bringing most of the .py files necessary for building service logic inside src folder<br>3) introducing core, microservice folders. core shall contain the gateway block from configs folder (present outside src) doing schema validation and passing it to the microservice (loaders, splitters etc)<br>4) Bringing api and utils within src except for testing folder.<br>5) introducing .env.sample and settings.sample.yaml so that i can share the sample of config data in github keeping the actual ones safe in my machine by mentioning them in .gitignore.<br>
+* <b>Blockages:</b><br>1) need to make changes in import statement in each module
+</details>
+<details>
 <summary><b>Day 4 (14 May 2026)</b></summary>
 * <b>Objective:</b><br>resolving interservice communication issue<br> 
 * <b>Wins:</b><br>1) the problem is resolved<br>2) using tempfile.NamedTempFile() instead of tempfile.gettempdir(), the later does not create a file except for a registry in host OS<br>3) passing the payload in the form of python dictionary with key-string containing a tuple with variables uploaded file's name, content-type and content. the content is fetched using .read()<br>4) adding async keyword in the ingestion service api as the gateway service awaits for response asynchronously<br>5) Mentioning follow_redirects parameter as True so that the gateway service can bypass 500 internal server error<br>6) the gateway service terminal was showing timeout error thus adding timeout = 10 as well in client.AsyncClient() method<br>
