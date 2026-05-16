@@ -1,8 +1,8 @@
-from ingestion.utils.helpers import Helper
-from ingestion.src.chunk_embedders import ChunkEmbedder
-from ingestion.src.loader_n_splitter.merge_loader_splitters import LoaderNSplitter
-from ingestion.src.loader_n_splitter.loaders import Loader
-from ingestion.src.loader_n_splitter.splitters import Splitter
+from src.dependencies.helpers import Helper
+from src.microservices.embedder.chunk_embedders import ChunkEmbedder
+from src.microservices.loader_n_splitter.merge_loader_splitters import LoaderNSplitter
+from src.microservices.loader_n_splitter.loaders import Loader
+from src.microservices.loader_n_splitter.splitters import Splitter
 
 
 helper = Helper()

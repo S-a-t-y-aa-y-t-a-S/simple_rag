@@ -1,5 +1,5 @@
-from utils.helpers import Helper
-from src.chunk_embedders import ChunkEmbedder
+from dependencies.helpers import Helper
+from microservices.embedder.chunk_embedders import ChunkEmbedder
 from langchain_chroma import Chroma
 from langchain_core.documents import Document
 

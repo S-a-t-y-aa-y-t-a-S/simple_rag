@@ -1,7 +1,7 @@
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_core.documents import Document
 from collections.abc import Iterable
-from utils.helpers import Helper
+from dependencies.helpers import Helper
 
 
 class Splitter:

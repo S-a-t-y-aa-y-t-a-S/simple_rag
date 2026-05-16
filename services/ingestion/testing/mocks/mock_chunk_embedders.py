@@ -1,5 +1,5 @@
-from ingestion.utils.helpers import Helper
-from ingestion.src.chunk_embedders import ChunkEmbedder
+from src.dependencies.helpers import Helper
+from src.microservices.embedder.chunk_embedders import ChunkEmbedder
 from langchain_core.documents import Document
 from .. import constants, utils
 import json

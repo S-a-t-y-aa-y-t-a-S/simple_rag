@@ -1,5 +1,5 @@
 # file configurations
-ENVIRONMENT_FILE=".env"
+ENVIRONMENT_FILE="configs/.env"
 READ_FILE_MODE="r"
 WRITE_FILE_MODE_BINARY="wb"
 
@@ -9,6 +9,7 @@ EMPTY_DICT={}
 EMPTY_LIST=[]
 NULL_VALUE=None
 DEFAULT_BOOL_VALUE=True
+DEFAULT_INT_VALUE=0
 
 # keys present in yaml
 LOADER_CONFIG_KEY="loader_config"

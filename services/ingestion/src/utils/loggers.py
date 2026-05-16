@@ -1,7 +1,7 @@
 import sys
 import logging
 from logging.handlers import RotatingFileHandler
-from ingestion.utils.helpers import Helper
+from dependencies.helpers import Helper
 
 
 class LoggerDef:

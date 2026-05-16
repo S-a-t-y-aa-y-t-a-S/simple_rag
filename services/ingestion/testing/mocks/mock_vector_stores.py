@@ -1,5 +1,5 @@
-from ingestion.utils.helpers import Helper
-from ingestion.src.vector_stores import VectorStore
+from src.dependencies.helpers import Helper
+from src.microservices.storage.vector_stores import VectorStore
 from langchain_core.documents import Document
 from .. import utils, constants
 import json

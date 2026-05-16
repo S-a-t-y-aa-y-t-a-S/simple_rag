@@ -3,10 +3,12 @@ from microservices.loader_n_splitter.splitters import Splitter
 from microservices.storage.vector_stores import VectorStore
 from dependencies.helpers import Helper
 from api.schemas.ingestion_schema import IngestionResponse
-from utils import file_handling
+from utils.file_handling import file_handling
 from fastapi import APIRouter, status, UploadFile, HTTPException
 from typing import Optional
+from config import constants
 import os, tempfile, shutil
+
 
 helper = Helper()
 api_config = helper.get_api_config()
@@ -25,15 +27,12 @@ splitter = Splitter(helper=helper)
 @ingest.post(path=api_config.base_url, status_code=status.HTTP_201_CREATED, response_model=IngestionResponse)
 async def ingest_doc(uploaded_file: UploadFile):
 
-    # file_path = file_handling(uploaded_file=uploaded_file, exception_config=exception_config)
-    await uploaded_file.seek(offset=0)
-
-    with tempfile.NamedTemporaryFile(delete=False, suffix=f"_{uploaded_file.filename}") as temp_file:
-        shutil.copyfileobj(uploaded_file.file, temp_file)
-        file_path = temp_file.name
+    
+    await uploaded_file.seek(offset=constants.DEFAULT_INT_VALUE)
+    file_path = file_handling(uploaded_file=uploaded_file, exception_config=exception_config)
 
     if os.path.exists(file_path):
-        print(file_path)
+        # print(file_path)
         doc_loader = loader.pdf_loader(uploaded_file=file_path)
         doc_chunks = splitter.doc_splitter(documents=doc_loader)
         storage = VectorStore(helper=helper)

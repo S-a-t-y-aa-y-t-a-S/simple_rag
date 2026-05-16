@@ -1,7 +1,7 @@
-from ingestion.src.loader_n_splitter.loaders import Loader
-from ingestion.src.loader_n_splitter.splitters import Splitter
-from ingestion.src.loader_n_splitter.merge_loader_splitters import LoaderNSplitter
-from ingestion.utils.helpers import Helper
+from src.microservices.loader_n_splitter.loaders import Loader
+from src.microservices.loader_n_splitter.splitters import Splitter
+from src.microservices.loader_n_splitter.merge_loader_splitters import LoaderNSplitter
+from src.dependencies.helpers import Helper
 from . import constants
 import json
 

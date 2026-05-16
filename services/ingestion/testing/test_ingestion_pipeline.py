@@ -1,7 +1,7 @@
-from ingestion.src.loader_n_splitter.loaders import Loader
-from ingestion.src.loader_n_splitter.splitters import Splitter
-from ingestion.src.vector_stores import VectorStore
-from ingestion.utils.helpers import Helper
+from src.microservices.loader_n_splitter.loaders import Loader
+from src.microservices.loader_n_splitter.splitters import Splitter
+from src.microservices.storage.vector_stores import VectorStore
+from src.dependencies.helpers import Helper
 from . import constants
 
 helper = Helper()

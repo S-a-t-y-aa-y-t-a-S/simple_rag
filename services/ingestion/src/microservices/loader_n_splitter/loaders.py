@@ -1,8 +1,8 @@
 from langchain_community.document_loaders import PyPDFLoader
 from langchain_core.documents import Document
 from collections.abc import Iterable
-from utils.helpers import Helper
-from configs import constants
+from dependencies.helpers import Helper
+from config import constants
 
 
 class Loader:

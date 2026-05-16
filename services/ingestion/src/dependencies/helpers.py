@@ -1,4 +1,5 @@
-from configs import constants, ingestion_configs
+from config import constants 
+from dependencies import ingestion_configs
 import yaml
 
 class Helper:

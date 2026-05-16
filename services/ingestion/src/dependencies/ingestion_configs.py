@@ -1,6 +1,6 @@
 from pydantic import BaseModel, Field
 from pydantic_settings import BaseSettings, SettingsConfigDict
-from . import constants
+from config import constants
 from pathlib import Path
 import os
 
@@ -10,7 +10,7 @@ class BasicConfig(BaseSettings):
 
     # obtaining the .env file path using Config class 
     model_config = SettingsConfigDict(
-        env_file = os.path.join(Path(__file__).resolve().parent, constants.ENVIRONMENT_FILE)
+        env_file = os.path.join(Path(__file__).resolve().parent.parent.parent, constants.ENVIRONMENT_FILE)
     )
     
 

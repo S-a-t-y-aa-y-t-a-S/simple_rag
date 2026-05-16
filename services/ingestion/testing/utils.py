@@ -2,6 +2,7 @@ import json
 from . import constants
 from typing import Any
 
+
 def file_handling(file_path: str, write_operation: bool = constants.DEFAULT_BOOL_VALUE, json_dumps_content: None|Any = constants.NULL_VALUE)-> None|Any:
     
     json_data = constants.NULL_VALUE

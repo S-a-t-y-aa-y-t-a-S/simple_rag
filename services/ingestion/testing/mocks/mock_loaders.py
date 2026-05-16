@@ -1,6 +1,6 @@
 
-from ingestion.src.loader_n_splitter.loaders import Loader
-from ingestion.utils.helpers import Helper
+from src.microservices.loader_n_splitter.loaders import Loader
+from src.dependencies.helpers import Helper
 
 
 loader = Loader(helper=Helper())
