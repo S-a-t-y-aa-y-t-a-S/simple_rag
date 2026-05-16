@@ -11,6 +11,12 @@
 ---
 #### Daily Standup Records (Click to expand)
 <details>
+<summary><b>Day 6 (16 May 2026)</b></summary>
+* <b>Objective:</b><br>refactoring ingestion folder structure<br> 
+* <b>Wins:</b><br>1) updating import statements in all modules across ingestion service<br>2) api testing done successfully
+* <b>Blockages:</b><br>1) got bad request error 300 due to module error<br>2) got internal server error 500 due to incorrect path of env file
+</details>
+<details>
 <summary><b>Day 5 (15 May 2026)</b></summary>
 * <b>Objective:</b><br>refactoring ingestion folder structure<br> 
 * <b>Wins:</b><br>1) keeping the folders intuitive<br>2) bringing most of the .py files necessary for building service logic inside src folder<br>3) introducing core, microservice folders. core shall contain the gateway block from configs folder (present outside src) doing schema validation and passing it to the microservice (loaders, splitters etc)<br>4) Bringing api and utils within src except for testing folder.<br>5) introducing .env.sample and settings.sample.yaml so that i can share the sample of config data in github keeping the actual ones safe in my machine by mentioning them in .gitignore.<br>
