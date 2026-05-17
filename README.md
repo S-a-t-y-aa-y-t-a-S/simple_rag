@@ -1,6 +1,7 @@
 ## Weekly Sprint logs
 
 ### Sprint 2: Gateway service designing skeleton (Week 1 - May 2026)
+<<<<<<< HEAD
 **Jira Epic:**
 - RAG-1 gateway notebook
 - RAG-2 refactoring ingestion structure
@@ -21,8 +22,29 @@
 - unprocessable entity 422 in gateway service
 - internal server error 500 even after successful connection
 - module error during refactor
+=======
+**Jira Epic:**<br>
+1) RAG-1 gateway notebook
+2) RAG-2 refactoring ingestion structure
+3) RAG-3 updating import statements in ingestion
+4) containerization of ingestion 
+
+**Sprint Summary Wins:**<br>
+1) successful inter service communication between gateway and ingestion service
+2) refactoring ingestion service package structure
+3) containerization of ingestion service
+
+**Sprint Summary Blockages:** <br>
+1) facing error code 307, 422 and 500
+
+>>>>>>> RAG-5-ing-docker
 ---
 #### Daily Standup Records (Click to expand)
+<details>
+<summary><b>Day 7 (17 May 2026)</b></summary>
+* <b>Objective:</b><br>dockerization of ingestion service<br> 
+* <b>Wins:</b><br>1) sucessfully containerized<br>2) pushed to dockerhub
+* <b>Blockages:</b><br>1) took around 10 mins to build the image<br>2) even while pushing the image to remote repo, it was around 8GB because of dependencies like torch and langchain
 <details>
 <summary><b>Day 6 (16 May 2026)</b></summary>
 * <b>Objective:</b><br>refactoring ingestion folder structure<br> 
