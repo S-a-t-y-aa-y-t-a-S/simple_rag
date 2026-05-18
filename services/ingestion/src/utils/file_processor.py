@@ -1,10 +1,11 @@
 import fastapi
-from config import constants
+from . import constants
 import tempfile
 import shutil, os
 from dependencies.ingestion_configs import ExceptionConfig
 
-def file_handling(uploaded_file: fastapi.UploadFile|str, exception_config: ExceptionConfig):
+
+def stage(uploaded_file: fastapi.UploadFile|str, exception_config: ExceptionConfig):
     
     try:
         with tempfile.NamedTemporaryFile(
