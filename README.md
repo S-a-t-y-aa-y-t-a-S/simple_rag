@@ -1,44 +1,52 @@
 ## Weekly Sprint logs
 
-### Sprint 2: Gateway service designing skeleton (Week 1 - May 2026)
-<<<<<<< HEAD
+### Sprint 3: Gateway service designing skeleton (Week 2 - May 2026)
+
 **Jira Epic:**
-- RAG-1 gateway notebook
-- RAG-2 refactoring ingestion structure
-- RAG-3 update import statements in ingestion
+1) RAG-4 class defs in gateway service modules
+2) RAG-2 refactoring ingestion structure
 
 **Sprint Summary Wins:**
-- notebooks are not always come in handy especially with api definitions
-- connected gateway to ingestion service via httpx
-- correction in payload by not using .model_dump() and using simple dictionary
-- usage of tempfile.NamedTempFile instead of tempfile.gettempdir
-- using follow_redirects parameter to solve error code 500
-- addding timeout parameter in httpx.AsyncClient().post() so that gateway service can wait for sufficient time to get response from ingestion
-- updating the folder structure of ingestion service and making intuitive
-- updating the import statements as well as per module refactoring
+1) [to be filled by weekend]
 
 **Sprint Summary Blockages:**
-- redirect error 307 in ingestion service
-- unprocessable entity 422 in gateway service
-- internal server error 500 even after successful connection
-- module error during refactor
-=======
-**Jira Epic:**<br>
+1) [to be filled by weekend]
+
+#### Daily Standup Records (Click to expand)
+<details>
+<summary><b>Day 1 (18 May 2026)</b></summary>
+* <b>Objective:</b><br>standardising gateway folder structure<br> 
+* <b>Wins:</b><br>1) brought yaml and env file under configs<br>2) utils, dependencies, core and api under src<br>3) working on schema_validator.py
+* <b>Blockages:</b><br>1) no blockages
+<details>
+
+---
+### Sprint 2: Gateway service designing skeleton (Week 2 - May 2026)
+
+**Jira Epic:**
 1) RAG-1 gateway notebook
 2) RAG-2 refactoring ingestion structure
-3) RAG-3 updating import statements in ingestion
-4) containerization of ingestion 
+3) RAG-3 update import statements in ingestion
+4) RAG-5 containerization of ingestion 
 
-**Sprint Summary Wins:**<br>
-1) successful inter service communication between gateway and ingestion service
-2) refactoring ingestion service package structure
-3) containerization of ingestion service
+**Sprint Summary Wins:**
+1) notebooks are not always come in handy especially with api definitions
+2) connected gateway to ingestion service via httpx
+3) correction in payload by not using .model_dump() and using simple dictionary
+4) usage of tempfile.NamedTempFile instead of tempfile.gettempdir
+5) using follow_redirects parameter to solve error code 500
+6) addding timeout parameter in httpx.AsyncClient().post() so that gateway service can wait for sufficient time to get response from ingestion
+7) updating the folder structure of ingestion service and making intuitive
+8) updating the import statements as well as per module refactoring
+9) containerization of ingestion service
 
-**Sprint Summary Blockages:** <br>
-1) facing error code 307, 422 and 500
+**Sprint Summary Blockages:**
+1) redirect error 307 in ingestion service
+2) unprocessable entity 422 in gateway service
+3) internal server error 500 even after successful connection
+4) module error during refactor
 
->>>>>>> RAG-5-ing-docker
----
+
 #### Daily Standup Records (Click to expand)
 <details>
 <summary><b>Day 7 (17 May 2026)</b></summary>
