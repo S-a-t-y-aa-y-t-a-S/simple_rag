@@ -1,13 +1,13 @@
-from src.microservices.loader_n_splitter.loaders import Loader
-from src.microservices.loader_n_splitter.splitters import Splitter
-from src.microservices.loader_n_splitter.merge_loader_splitters import LoaderNSplitter
-from src.dependencies.helpers import Helper
+from src.core.loader_n_splitter.loaders import Loader
+from src.core.loader_n_splitter.splitters import Splitter
+from src.core.loader_n_splitter.merge_loader_splitters import LoaderNSplitter
+from src.dependencies.yaml_extractor import YamlExtractor
 from . import constants
 import json
 
 
-loader = Loader(helper=Helper())
-splitter = Splitter(helper=Helper())
+loader = Loader(extractor=YamlExtractor())
+splitter = Splitter(extractor=YamlExtractor())
 loader_n_splitter = LoaderNSplitter(loader=loader, splitter=splitter)
 
 serializable_doc_chunks = [chunk.model_dump() for chunk in loader_n_splitter.run_loader_splitter()]

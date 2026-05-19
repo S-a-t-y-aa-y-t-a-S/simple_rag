@@ -1,15 +1,15 @@
-from dependencies.helpers import Helper
-from microservices.embedder.chunk_embedders import ChunkEmbedder
+from dependencies.yaml_extractor import YamlExtractor
+from core.embedder.chunk_embedders import ChunkEmbedder
 from langchain_chroma import Chroma
 from langchain_core.documents import Document
 
 
 class VectorStore (ChunkEmbedder):
-    def __init__(self, helper: Helper):
+    def __init__(self, extractor: YamlExtractor):
 
-        super().__init__(helper=Helper())
+        super().__init__(extractor=YamlExtractor())
 
-        self.__storage_config = helper.get_storage_config()
+        self.__storage_config = extractor.get_storage_config()
         self.__folder_dir = self.__storage_config.folder_dir
         self.__collection_name = self.__storage_config.collection_name
 

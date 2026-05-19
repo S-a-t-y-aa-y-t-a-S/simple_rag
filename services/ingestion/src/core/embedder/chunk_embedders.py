@@ -1,11 +1,11 @@
 from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_core.documents import Document
-from dependencies.helpers import Helper
+from dependencies.yaml_extractor import YamlExtractor
 
 
 class ChunkEmbedder:
-    def __init__(self, helper: Helper):
-        self.__chunk_embedding_config = helper.get_embedder_config()
+    def __init__(self, extractor: YamlExtractor):
+        self.__chunk_embedding_config = extractor.get_embedder_config()
         self.__model_name = self.__chunk_embedding_config.embedding_model_name
         self.__embedding_function = HuggingFaceEmbeddings(model_name = self.__model_name)
 

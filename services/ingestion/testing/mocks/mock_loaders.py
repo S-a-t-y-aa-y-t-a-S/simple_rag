@@ -1,9 +1,9 @@
 
-from src.microservices.loader_n_splitter.loaders import Loader
-from src.dependencies.helpers import Helper
+from src.core.loader_n_splitter.loaders import Loader
+from src.dependencies.yaml_extractor import YamlExtractor
 
 
-loader = Loader(helper=Helper())
+loader = Loader(extractor=YamlExtractor())
 print(loader.pdf_loader())
 
 

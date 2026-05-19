@@ -1,9 +1,9 @@
 
-from src.microservices.loader_n_splitter.splitters import Splitter
-from src.dependencies.helpers import Helper
+from src.core.loader_n_splitter.splitters import Splitter
+from src.dependencies.yaml_extractor import YamlExtractor
 from .. import constants
 
 splitter = Splitter(
-    helper=Helper()
+    extractor=YamlExtractor()
 )
 print(splitter.doc_splitter(documents=constants.SAMPLE_DOCUMENT))

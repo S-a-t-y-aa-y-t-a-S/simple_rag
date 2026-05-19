@@ -1,14 +1,14 @@
-from config import constants 
-from dependencies import ingestion_configs
+from utils import constants 
+from dependencies import schema_validator
 import yaml
 
-class Helper:
+class YamlExtractor:
 
     def __init__(
             self,
             file_mode: str = constants.READ_FILE_MODE):
         
-        self.ingestion_configuration = ingestion_configs.BasicConfig()
+        self.ingestion_configuration = schema_validator.Config()
         self.yaml_file_path = self.ingestion_configuration.yaml_file_path
         self.file_mode = file_mode
 
@@ -26,49 +26,49 @@ class Helper:
     def get_loader_config(self):
         return self.load_section(
             section_name=constants.LOADER_CONFIG_KEY,
-            section_class=ingestion_configs.LoaderConfig
+            section_class=schema_validator.LoaderConfig
         )
     
     def get_splitter_config(self):
         return self.load_section(
             section_name=constants.SPLITTER_CONFIG_KEY,
-            section_class=ingestion_configs.SplitterConfig
+            section_class=schema_validator.SplitterConfig
         )
     
     def get_embedder_config(self):
         return self.load_section(
             section_name=constants.EMBEDDER_CONFIG_KEY,
-            section_class=ingestion_configs.EmbedderConfig
+            section_class=schema_validator.EmbedderConfig
         )
     
     def get_storage_config(self):
         return self.load_section(
             section_name=constants.STORAGE_CONFIG_KEY,
-            section_class=ingestion_configs.VectorStoreConfig
+            section_class=schema_validator.VectorStoreConfig
         )
         
     def get_logger_config(self):
         return self.load_section(
             section_name=constants.LOGGER_CONFIG_KEY,
-            section_class=ingestion_configs.LoggerConfig
+            section_class=schema_validator.LoggerConfig
         )
     
     def get_api_config(self):
         return self.load_section(
             section_name=constants.API_CONFIG_KEY,
-            section_class=ingestion_configs.APIConfig
+            section_class=schema_validator.APIConfig
         )
     
     def get_return_config(self):
         return self.load_section(
             section_name=constants.RETURN_CONFIG_KEY,
-            section_class=ingestion_configs.ReturnConfig
+            section_class=schema_validator.ReturnConfig
         )
 
     def get_exception_config(self):
         return self.load_section(
             section_name=constants.EXCEPTION_CONFIG_KEY,
-            section_class=ingestion_configs.ExceptionConfig
+            section_class=schema_validator.ExceptionConfig
         )
 
         

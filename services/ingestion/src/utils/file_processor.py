@@ -2,7 +2,7 @@ import fastapi
 from . import constants
 import tempfile
 import shutil, os
-from dependencies.ingestion_configs import ExceptionConfig
+from dependencies.schema_validator import ExceptionConfig
 
 
 def stage(uploaded_file: fastapi.UploadFile|str, exception_config: ExceptionConfig):

@@ -1,12 +1,12 @@
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_core.documents import Document
 from collections.abc import Iterable
-from dependencies.helpers import Helper
+from dependencies.yaml_extractor import YamlExtractor
 
 
 class Splitter:
-    def __init__(self, helper: Helper):
-        self.__splitter_config = helper.get_splitter_config()
+    def __init__(self, extractor: YamlExtractor):
+        self.__splitter_config = extractor.get_splitter_config()
         self.__chunksize = self.__splitter_config.chunksize
         self.__chunkoverlap = self.__splitter_config.chunkoverlap
         

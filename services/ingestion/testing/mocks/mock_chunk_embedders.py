@@ -1,13 +1,14 @@
-from src.dependencies.helpers import Helper
-from src.microservices.embedder.chunk_embedders import ChunkEmbedder
-from langchain_core.documents import Document
+from src.dependencies.yaml_extractor import YamlExtractor
+from src.core.embedder.chunk_embedders import ChunkEmbedder
 from .. import constants, utils
+
+from langchain_core.documents import Document
 import json
 
 
-helper = Helper()
+extractor = YamlExtractor()
 
-chunk_embedder = ChunkEmbedder(helper=helper)
+chunk_embedder = ChunkEmbedder(extractor=extractor)
 
 with open(file=constants.DOC_CHUNKS_JSON_FILE, mode=constants.READ_FILE_MODE) as json_file_ptr:
     json_data = json.load(fp=json_file_ptr) # extracted the complete content (key-value) from json file

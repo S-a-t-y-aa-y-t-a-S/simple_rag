@@ -1,13 +1,13 @@
 from langchain_community.document_loaders import PyPDFLoader
 from langchain_core.documents import Document
 from collections.abc import Iterable
-from dependencies.helpers import Helper
-from config import constants
+from dependencies.yaml_extractor import YamlExtractor
+from utils import constants
 
 
 class Loader:
-    def __init__(self, helper: Helper):
-        self.__loader_config = helper.get_loader_config()
+    def __init__(self, extractor: YamlExtractor):
+        self.__loader_config = extractor.get_loader_config()
         self.__filepath = self.__loader_config.filepath
     
     def pdf_loader(self, uploaded_file: str = constants.EMPTY_STRING)-> Iterable[Document]:

@@ -1,14 +1,14 @@
 import sys
 import logging
 from logging.handlers import RotatingFileHandler
-from dependencies.helpers import Helper
+from dependencies.yaml_extractor import YamlExtractor
 
 
 class LoggerDef:
 
-    def __init__(self, helper: Helper):
+    def __init__(self, extractor: YamlExtractor):
 
-        self.__logger_config = helper.get_logger_config()
+        self.__logger_config = extractor.get_logger_config()
         self.__root_logger = logging.getLogger()
         self.__log_file = self.__logger_config.target_log_file
         self.__logging_formatter = logging.Formatter(
