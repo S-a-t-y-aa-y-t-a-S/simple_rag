@@ -1,17 +1,33 @@
+
 from enum import Enum
-from typing import ClassVar, Final, Mapping, Any
+from typing import Mapping, Any
+from types import MappingProxyType
+
+
+class ImmutableMetaClass(type):
+    '''prevents the child class attributes
+    from being modified'''
+    def __setattr__(cls, name: str, value: Any) -> None:
+        raise AttributeError(
+            f"Class '{cls.__name__}' is immutable. Cannot modify attribute '{name}'."
+        )
+
+    def __delattr__(cls, name: str) -> None:
+        raise AttributeError(
+            f"Class '{cls.__name__}' is immuatable. Connot delete attribute '{name}'."
+        )
 
 
 # default values
-class Defaultvals:
-    EMPTY_STRING: Final[ClassVar[str]]=""
-    EMPTY_TUPLE: Final[ClassVar[tuple[()]]] = () # since list is mutable, we shall use type casting 
+class Defaultvals(metaclass=ImmutableMetaClass):
+    EMPTY_STRING: str = ""
+    EMPTY_TUPLE: tuple[()] = () # since list is mutable, we shall use type casting 
     # in that case
-    EMPTY_DICT: Final[ClassVar[Mapping[Any, Any]]] = {}
-    NULL_VALUE: Final=None # only works for None, no explicit mentioning of ClassVar, treated as 
+    EMPTY_DICT: Mapping[Any, Any] = MappingProxyType({})
+    NULL_VALUE = None # only works for None, no explicit mentioning of ClassVar, treated as 
     # static implicitly
-    DEFAULT_BOOL_VALUE: Final[ClassVar[bool]]=True
-    DEFAULT_INT_VALUE: Final[ClassVar[int]]=0
+    DEFAULT_BOOL_VALUE: bool = True
+    DEFAULT_INT_VALUE: int = 0
 
 
 # keys present in yaml

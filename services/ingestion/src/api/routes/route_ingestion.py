@@ -3,8 +3,8 @@ from core.loader_n_splitter.splitters import Splitter
 from core.storage.vector_stores import VectorStore
 from dependencies.yaml_extractor import YamlExtractor
 from api.schemas.ingestion_schema import IngestionResponse
-from utils.file_processor import stage
-from utils import constants
+from utils.file_processor import Processor
+from utils.constants import Defaultvals
 
 from fastapi import APIRouter, status, UploadFile, HTTPException
 from typing import Optional
@@ -15,6 +15,7 @@ extractor = YamlExtractor()
 api_config = extractor.get_api_config()
 exception_config = extractor.get_exception_config()
 return_config = extractor.get_return_config()
+processor = Processor(default_bool_val=Defaultvals.DEFAULT_BOOL_VALUE)
 
 ingest = APIRouter(
     prefix=api_config.endpoint,
@@ -29,8 +30,8 @@ splitter = Splitter(extractor=extractor)
 async def ingest_doc(uploaded_file: UploadFile):
 
     
-    await uploaded_file.seek(offset=constants.DEFAULT_INT_VALUE)
-    file_path = stage(uploaded_file=uploaded_file, exception_config=exception_config)
+    await uploaded_file.seek(offset=Defaultvals.DEFAULT_INT_VALUE)
+    file_path = processor.stage(uploaded_file=uploaded_file, exception_config=exception_config)
 
     if os.path.exists(file_path):
         # print(file_path)

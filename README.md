@@ -14,6 +14,18 @@
 
 #### Daily Standup Records (Click to expand)
 <details>
+<summary><b>Day 3 (20 May 2026)</b></summary>
+* <b>Objective:</b><br>introducing custom class to make child class attributes immutable<br> 
+* <b>Wins:</b><br>1) inheriting type in a custom class def<br>2) speifying metaclass param to make the child class has immutable attributes, inheriting from that custom class. del triggers __delattr__() and = triggers __setattr() internally in python, make made changes to the value attribute error shall be raised<br>3) for dictionary, MappingProxyTypes imported from types is assigned within which {} is used.
+* <b>Blockages:</b><br>1) no blockages
+<details>
+<details>
+<summary><b>Day 2 (19 May 2026)</b></summary>
+* <b>Objective:</b><br>refactoring ingestion service<br> 
+* <b>Wins:</b><br>1) refactoring constants.py file<br>2) bringing every variables under class definition to a structural feeling<br>3) Bringing enum to the picture<br>4) Making changes in import statements
+* <b>Blockages:</b><br>1) ClassVar keyword becomes unncessary<br>2) Final is simply a typo
+<details>
+<details>
 <summary><b>Day 1 (18 May 2026)</b></summary>
 * <b>Objective:</b><br>standardising gateway folder structure<br> 
 * <b>Wins:</b><br>1) brought yaml and env file under configs<br>2) utils, dependencies, core and api under src<br>3) working on schema_validator.py
