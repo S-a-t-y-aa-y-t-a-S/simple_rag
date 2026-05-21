@@ -14,7 +14,7 @@ class Processor:
         
         try:
             with tempfile.NamedTemporaryFile(
-                delete=not self.__default_bool_val, 
+                delete=not self.__default_bool_val, # False
                 suffix=f"_{uploaded_file.filename}"
             ) as temp_file:
 
