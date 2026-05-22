@@ -2,6 +2,7 @@
 from pydantic import BaseModel
 
 class IngestResponse(BaseModel):
-    status: str
+    status: int
     message: str
+    content: dict
     

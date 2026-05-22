@@ -24,7 +24,7 @@ async def forward_to_ingestion(uploaded_file: UploadFile):
     async with httpx.AsyncClient(follow_redirects=True) as client:
     
         response = await client.post(
-            INGESTION_URL,
+            url=INGESTION_URL,
             files=payload,
             timeout=10
         )

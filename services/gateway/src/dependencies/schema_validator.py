@@ -17,6 +17,8 @@ class URLConfig(BaseModel):
     host: str
     port: int
     endpoint: str
+    tag: str
+    base_endpoint: str
     
 
 class ServiceCommConfig(BaseModel):

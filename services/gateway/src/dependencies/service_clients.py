@@ -1,11 +1,12 @@
 
 import httpx
-from dependencies.schema_validator import URLConfig, ServiceCommConfig
+from dependencies.yaml_extractor import YamlExtractor
 from utils.constants import DefaultVals
 
 
-url_config = URLConfig()
-service_comm_config = ServiceCommConfig()
+extactor = YamlExtractor()
+url_config = extactor.get_url_config()
+service_comm_config = extactor.get_service_comm_config()
 
 
 async def get_ingestion_client()-> httpx.AsyncClient:
