@@ -28,6 +28,7 @@ class DefaultVals(metaclass=ImmutableMetaClass):
 
 class ConfigKey(str, Enum):
     URL_CONFIG_KEY="url_config"
+    INGESTION_SERVICE_CONFIG_KEY="ingestion_service_config"
     SERVICE_COMM_CONFIG_KEY="service_comm_config"
     
 

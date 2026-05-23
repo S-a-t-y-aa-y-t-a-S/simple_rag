@@ -31,7 +31,12 @@ class YamlExtractor:
             section_class=schema_validator.URLConfig
         )
 
-    
+    def get_ingestion_service_config(self):
+        return self.load_section(
+            section_name=ConfigKey.INGESTION_SERVICE_CONFIG_KEY,
+            section_class=schema_validator.IngestionServiceConfig
+        )
+
     def get_service_comm_config(self):
         return self.load_section(
             section_name=ConfigKey.SERVICE_COMM_CONFIG_KEY,

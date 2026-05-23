@@ -1,8 +1,12 @@
 
 from fastapi import FastAPI
-from api.routers import ingestion_router
+from api.routers.ingestion_router import IngestionRouter
+from dependencies.yaml_extractor import YamlExtractor
 
 app = FastAPI()
+extractor = YamlExtractor()
 
-app.include_router(router=ingestion_router.ingest)
+# class init
+ingestion_router = IngestionRouter(extractor=extractor)
+app.include_router(router=ingestion_router.router)
 

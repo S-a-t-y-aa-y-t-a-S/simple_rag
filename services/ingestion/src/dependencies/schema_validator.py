@@ -42,7 +42,8 @@ class APIConfig(BaseModel):
     base_url: str
     endpoint: str
     swagger_ui_tag: str
-    
+    method: str
+
 
 class ReturnConfig(BaseModel):
     ingestion: str

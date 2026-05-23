@@ -1,27 +1,43 @@
 
 from fastapi import status, APIRouter, UploadFile, Depends
-from core.ingestion_service.ingestion import forward_file
-from dependencies.service_clients import get_ingestion_client
+from core.ingestion_service.ingestion import IngestionService
+from dependencies.service_clients import ServiceClients
 from api.schemas.ingestion_schema import IngestResponse
 from dependencies.yaml_extractor import YamlExtractor
 
-url_config = YamlExtractor().get_url_config()
+class IngestionRouter:
 
-ingest = APIRouter(
-    prefix=url_config.endpoint,
-    tags=[url_config.tag]
-)
+    def __init__(self, extractor: YamlExtractor):
+        self.__url_config = extractor.get_url_config()
+        self.__ingestion_serv_config = extractor.get_ingestion_service_config()
+        self.router = APIRouter(
+            prefix=self.__ingestion_serv_config.endpoint,
+            tags=[self.__ingestion_serv_config.tag]
+        )
+        # registering routes dynamically on init
+        self.__register_routes()
 
-@ingest.post(path=url_config.base_endpoint, status_code=status.HTTP_201_CREATED)
-async def call_ingestion_service(uploaded_file: UploadFile, 
-                                 client=Depends(get_ingestion_client)):
-    response = await forward_file(
-        uploaded_file=uploaded_file,
-        client=client
-    )    
+    def __register_routes(self):
+        self.router.add_api_route(
+            path=self.__url_config.base_endpoint,
+            endpoint=self._call_ingestion_service,
+            methods=[self.__ingestion_serv_config.api_method],
+            status_code=status.HTTP_201_CREATED,
+            response_model=IngestResponse
+        )
 
-    return IngestResponse(
-        status=response.status_code,
-        message=response.text,
-        content=response.json()
-    )
+    async def _call_ingestion_service(
+            self,
+            uploaded_file: UploadFile,
+            client=Depends(ServiceClients().get_ingestion_client)
+    ):
+        response = await IngestionService().forward_file(
+            uploaded_file=uploaded_file,
+            client=client
+        )
+
+        return IngestResponse(
+            status=response.status_code,
+            message=response.text,
+            content=response.json()
+        )

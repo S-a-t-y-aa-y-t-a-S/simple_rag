@@ -16,11 +16,14 @@ class Config(BaseSettings):
 class URLConfig(BaseModel):
     host: str
     port: int
+    base_endpoint: str
+
+class IngestionServiceConfig(BaseModel):
     endpoint: str
     tag: str
-    base_endpoint: str
+    api_method: str
+    payload_key: str
     
-
 class ServiceCommConfig(BaseModel):
     timeout: int
     
