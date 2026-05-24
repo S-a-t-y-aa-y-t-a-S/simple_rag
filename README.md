@@ -7,12 +7,27 @@
 2) RAG-2 refactoring ingestion structure
 
 **Sprint Summary Wins:**
-1) [to be filled by weekend]
+1) successfully created class defs<br>
+2) commmunication is working well<br>
+3) ingestion and gateway folder structure successfully refactored<br>
 
 **Sprint Summary Blockages:**
-1) [to be filled by weekend]
+1) faced 422 error in ingestion service, the payload key needs to be same as passed in ingestion service<br>
+
 
 #### Daily Standup Records (Click to expand)
+<details>
+<summary><b>Day 7 (24 May 2026)</b></summary>
+* <b>Objective:</b><br>resolving 422 error<br> 
+* <b>Wins:</b><br>1) successfully resolved 422 error making changes in the payload key<br>2) added await .seek(0) in ingestion.py 
+* <b>Blockages:</b><br>1) no blockages
+</details>
+<details>
+<summary><b>Day 6 (23 May 2026)</b></summary>
+* <b>Objective:</b><br>class def creation<br> 
+* <b>Wins:</b><br>1) successfully created class def for all modules<br>
+* <b>Blockages:</b><br>1) facing 422 unprocessible entity error from ingestion service<br>
+</details>
 <details>
 <summary><b>Day 5 (22 May 2026)</b></summary>
 * <b>Objective:</b><br>tested Inter Service Comm after writing complete func def<br> 

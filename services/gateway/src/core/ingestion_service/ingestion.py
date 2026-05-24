@@ -1,7 +1,8 @@
 
 import httpx
-from fastapi import UploadFile
+from fastapi import UploadFile, Response
 from dependencies.yaml_extractor import YamlExtractor
+from utils.constants import DefaultVals
 
 
 class IngestionService:
@@ -11,8 +12,9 @@ class IngestionService:
 
     async def forward_file(self,
                            uploaded_file: UploadFile,
-                           client: httpx.AsyncClient)-> dict:
+                           client: httpx.AsyncClient)-> Response:
         
+        await uploaded_file.seek(DefaultVals.DEFAULT_INT_VALUE)
         file_content = await uploaded_file.read()
 
         payload = {
@@ -24,7 +26,7 @@ class IngestionService:
         }
 
         return await client.post(
-            url=self.__ingestion_serv_config.endpoint,
+            url=self.__ingestion_serv_config.endpoint, # /ingest
             files=payload
         )
     

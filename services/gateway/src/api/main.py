@@ -4,9 +4,8 @@ from api.routers.ingestion_router import IngestionRouter
 from dependencies.yaml_extractor import YamlExtractor
 
 app = FastAPI()
-extractor = YamlExtractor()
 
 # class init
-ingestion_router = IngestionRouter(extractor=extractor)
+ingestion_router = IngestionRouter(extractor=YamlExtractor())
 app.include_router(router=ingestion_router.router)
 
