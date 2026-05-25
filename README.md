@@ -17,8 +17,8 @@
 <details>
 <summary><b>Day 1 (25 May 2026)</b></summary>
 * <b>Objective:</b><br>adding logger and dockerfile<br> 
-* <b>Wins:</b> 
-* <b>Blockages:</b><br>
+* <b>Wins:</b>1) added logger file and docker file to gateway service<br>2) init sys design updation of ingestion service 
+* <b>Blockages:</b>1) No blockage<br>
 </details>
 ---
 
