@@ -26,4 +26,8 @@ class IngestionServiceConfig(BaseModel):
     
 class ServiceCommConfig(BaseModel):
     timeout: int
-    
+
+class LoggerConfig(BaseModel):
+    target_log_file: str
+    logging_formatter: str
+    datetime_format: str    

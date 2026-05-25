@@ -1,8 +1,19 @@
-url:
-  host: 0.0.0.0
-  port: 0
-  endpoint: ""
+url_config:
+  host: "http://127.0.0.1"
+  port: 8000
+  endpoint: "/"
+
+ingestion_service_config:
+  endpoint: "/ingest"
+  tag: "ingest"
+  api_method: "post"
+  payload_key: "uploaded_file"
 
 service_communication:
-  timeout: 0
+  timeout: 10
+  
+logger_config:
+  target_log_file: "/home/rik07/Documents/repos/simple_rag/services/gateway/logs/gateway.log"
+  logging_formatter: "TIME=%(asctime)s LEVEL=%(levelname)s PATH=%(pathname)s LINE_NUMBER=%(lineno)d MESSAGE=%(message)s"
+  datetime_format: "%Y-%m-%d %H:%M:%S"
   

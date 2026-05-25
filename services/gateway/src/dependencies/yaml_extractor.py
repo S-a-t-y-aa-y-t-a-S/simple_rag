@@ -42,3 +42,9 @@ class YamlExtractor:
             section_name=ConfigKey.SERVICE_COMM_CONFIG_KEY,
             section_class=schema_validator.ServiceCommConfig
         )
+    
+    def get_logger_config(self):
+        return self.load_section(
+            section_name=ConfigKey.LOGGER_CONFIG_KEY,
+            section_class=schema_validator.LoggerConfig                   
+        )
