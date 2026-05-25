@@ -3,6 +3,28 @@
 ### Sprint 3: Gateway service designing skeleton (Week 2 - May 2026)
 
 **Jira Epic:**
+1) RAG-8 adding loggers and dockerfile def in a gateway
+2) RAG-6 sketch system diagrams
+
+**Sprint Summary Wins:**
+1) [to be filled in weekend]
+
+**Sprint Summary Blockages:**
+1) [to be filled in weekend]
+
+
+#### Daily Standup Records (Click to expand)
+<details>
+<summary><b>Day 1 (25 May 2026)</b></summary>
+* <b>Objective:</b><br>adding logger and dockerfile<br> 
+* <b>Wins:</b> 
+* <b>Blockages:</b><br>
+</details>
+---
+
+### Sprint 3: Gateway service designing skeleton (Week 2 - May 2026)
+
+**Jira Epic:**
 1) RAG-4 class defs in gateway service modules
 2) RAG-2 refactoring ingestion structure
 
