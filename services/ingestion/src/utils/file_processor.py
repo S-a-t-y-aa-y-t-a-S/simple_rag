@@ -1,4 +1,4 @@
-import fastapi
+from fastapi import UploadFile
 from .constants import Defaultvals
 import tempfile
 import shutil, os
@@ -10,7 +10,7 @@ class Processor:
     def __init__(self, default_bool_val: bool):
         self.__default_bool_val: bool = default_bool_val
 
-    def stage(self, uploaded_file: fastapi.UploadFile|str, exception_config: ExceptionConfig):
+    def stage(self, uploaded_file: UploadFile, exception_config: ExceptionConfig):
         
         try:
             with tempfile.NamedTemporaryFile(

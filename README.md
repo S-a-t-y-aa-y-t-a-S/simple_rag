@@ -15,9 +15,15 @@
 
 #### Daily Standup Records (Click to expand)
 <details>
+<summary><b>Day 2 (26 May 2026)</b></summary>
+* <b>Objective:</b><br>updating package and class diagram<br> 
+* <b>Wins:</b>1) package diagram updated <br> 
+* <b>Blockages:</b>1) Working on class diagram<br>
+</details>
+<details>
 <summary><b>Day 1 (25 May 2026)</b></summary>
 * <b>Objective:</b><br>adding logger and dockerfile<br> 
-* <b>Wins:</b>1) added logger file and docker file to gateway service<br>2) init sys design updation of ingestion service 
+* <b>Wins:</b>1) added logger file and docker file to gateway service<br>2) init sys design updation of ingestion package diagram
 * <b>Blockages:</b>1) No blockage<br>
 </details>
 ---
