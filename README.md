@@ -15,6 +15,13 @@
 
 #### Daily Standup Records (Click to expand)
 <details>
+<summary><b>Day 3 (29 May 2026)</b></summary>
+* <b>Objective:</b><br>activity diagram to be updated<br> 
+* <b>Wins:</b>1) sequence diag needed if inter service comm is involved but not intra<br> 
+* <b>Blockages:</b>1) improvement in activity diagram<br>
+</details>
+<details>
+<details>
 <summary><b>Day 2 (26 May 2026)</b></summary>
 * <b>Objective:</b><br>updating package and class diagram<br> 
 * <b>Wins:</b>1) package diagram updated <br> 
