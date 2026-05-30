@@ -13,7 +13,13 @@
 1) [to be filled in weekend]
 
 
-#### Daily Standup Records (Click to expand)
+#### Daily Standup Records (Click to expand)\
+<details>
+<summary><b>Day 4 (30 May 2026)</b></summary>
+* <b>Objective:</b>package diagram for gateway service<br><br> 
+* <b>Wins:</b>1) activity diagram to be updated<br>2) package diagram for gateway service is ready<br>
+* <b>Blockages:</b>1) working on class diagram of gateway service<br>
+</details>
 <details>
 <summary><b>Day 3 (29 May 2026)</b></summary>
 * <b>Objective:</b><br>activity diagram to be updated<br> 
