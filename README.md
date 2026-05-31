@@ -13,7 +13,13 @@
 1) [to be filled in weekend]
 
 
-#### Daily Standup Records (Click to expand)\
+#### Daily Standup Records (Click to expand)
+<details>
+<summary><b>Day 5 (31 May 2026)</b></summary>
+* <b>Objective:</b>working on gateway class diagram<br><br> 
+* <b>Wins:</b>1) class blocks are constructed<br>2) need to connect them together<br>
+* <b>Blockages:</b>1) No blockages<br>
+</details>
 <details>
 <summary><b>Day 4 (30 May 2026)</b></summary>
 * <b>Objective:</b>package diagram for gateway service<br><br> 

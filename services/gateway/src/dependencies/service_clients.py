@@ -10,7 +10,6 @@ class ServiceClients:
         self.__extactor: YamlExtractor = YamlExtractor()
         self.__url_config = self.__extactor.get_url_config()
         self.__service_comm_config = self.__extactor.get_service_comm_config()
-        self.__ingestion_serv_config = self.__extactor.get_ingestion_service_config()
 
     async def get_ingestion_client(self)-> httpx.AsyncClient:
         return httpx.AsyncClient(
