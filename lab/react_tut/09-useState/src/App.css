@@ -1,0 +1,25 @@
+button{
+    background: rgb(178, 120, 120);
+    margin: 50px;
+    padding: 10px;
+    border-radius: 10px;
+}
+.btn{    
+    background: rgb(178, 120, 120);
+    margin: 50px;
+    margin-left: 120px;
+    padding: 10px;
+    border-radius: 10px;
+}
+h1{
+    background-color: rgb(170, 150, 150);
+    height: 100px; 
+    width: 50px;
+    padding: 40px 80px;
+    font-size: medium;
+    margin-bottom: 50px;
+    margin-left: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+}
