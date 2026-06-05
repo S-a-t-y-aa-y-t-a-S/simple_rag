@@ -3,3 +3,4 @@ envs/
 __pycache__/
 settings.yaml
 logs
+node_modules/
