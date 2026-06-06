@@ -1,10 +1,9 @@
 ## Weekly Sprint logs
 
-### Sprint 3: Gateway service designing skeleton (Week 2 - May 2026)
+### Sprint 3: Gateway service designing skeleton (Week 1 - Jun 2026)
 
 **Jira Epic:**
-1) RAG-8 adding loggers and dockerfile def in a gateway
-2) RAG-6 sketch system diagrams
+1) RAG-6 sketch system diagrams
 
 **Sprint Summary Wins:**
 1) [to be filled in weekend]
@@ -15,14 +14,64 @@
 
 #### Daily Standup Records (Click to expand)
 <details>
+<summary><b>Day 1 (1 Jun 2026)</b></summary>
+* <b>Objective:</b>working on gateway class diagram<br><br> 
+* <b>Wins:</b>1) completed desining cls dia
+* <b>Blockages:</b>1) Need to work on activity diagram<br>
+</details>
+
+### Sprint 2: Gateway service designing skeleton (Week 4 - May 2026)
+
+**Jira Epic:**
+1) RAG-8 adding loggers and dockerfile def in a gateway
+2) RAG-6 sketch system diagrams
+
+**Sprint Summary Wins:**
+1) updated cls, package dia of ingestion
+2) created activity dia of ingestion
+3) updated package dia of gateway
+4) logger file and docker file for gateway service has been added
+5) dockerfile of gate3way is deployed to dockerhub
+
+**Sprint Summary Blockages:**
+1) No blockages found
+
+
+#### Daily Standup Records (Click to expand)
+<details>
+<summary><b>Day 5 (31 May 2026)</b></summary>
+* <b>Objective:</b>working on gateway class diagram<br><br> 
+* <b>Wins:</b>1) class blocks are constructed<br>2) need to connect them together<br>
+* <b>Blockages:</b>1) No blockages<br>
+</details>
+<details>
+<summary><b>Day 4 (30 May 2026)</b></summary>
+* <b>Objective:</b>package diagram for gateway service<br><br> 
+* <b>Wins:</b>1) activity diagram to be updated<br>2) package diagram for gateway service is ready<br>
+* <b>Blockages:</b>1) working on class diagram of gateway service<br>
+</details>
+<details>
+<summary><b>Day 3 (29 May 2026)</b></summary>
+* <b>Objective:</b><br>activity diagram to be updated<br> 
+* <b>Wins:</b>1) sequence diag needed if inter service comm is involved but not intra<br> 
+* <b>Blockages:</b>1) improvement in activity diagram<br>
+</details>
+<details>
+<details>
+<summary><b>Day 2 (26 May 2026)</b></summary>
+* <b>Objective:</b><br>updating package and class diagram<br> 
+* <b>Wins:</b>1) package diagram updated <br> 
+* <b>Blockages:</b>1) Working on class diagram<br>
+</details>
+<details>
 <summary><b>Day 1 (25 May 2026)</b></summary>
 * <b>Objective:</b><br>adding logger and dockerfile<br> 
-* <b>Wins:</b> 
-* <b>Blockages:</b><br>
+* <b>Wins:</b>1) added logger file and docker file to gateway service<br>2) init sys design updation of ingestion package diagram
+* <b>Blockages:</b>1) No blockage<br>
 </details>
 ---
 
-### Sprint 3: Gateway service designing skeleton (Week 2 - May 2026)
+### Sprint 1: Gateway service designing skeleton (Week 2 - May 2026)
 
 **Jira Epic:**
 1) RAG-4 class defs in gateway service modules
