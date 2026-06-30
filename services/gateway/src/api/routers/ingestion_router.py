@@ -1,5 +1,5 @@
 
-from fastapi import status, APIRouter, UploadFile, Depends
+from fastapi import status, APIRouter, UploadFile, Depends, File
 from core.ingestion_service.ingestion import IngestionService
 from dependencies.service_clients import ServiceClients
 from api.schemas.ingestion_schema import IngestResponse
@@ -31,7 +31,7 @@ class IngestionRouter:
 
     async def _call_ingestion_service(
             self,
-            uploaded_file: UploadFile,
+            uploaded_file: UploadFile = File(...),
             client:httpx.AsyncClient=Depends(ServiceClients().get_ingestion_client) 
     ):
 
