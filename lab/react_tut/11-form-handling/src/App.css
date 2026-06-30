@@ -1,0 +1,10 @@
+input, button{
+  padding: 20px;
+  height: 20px;
+  width: 70;
+  margin: 20px;
+}
+button{
+  display: inline-flex;
+  align-items: center;
+}

@@ -1,8 +1,10 @@
+.venv/
 envs/
 .env
 __pycache__/
 settings.yaml
 logs
+node_modules/
 scrum.md
 
 # Logs
@@ -29,5 +31,3 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
-
-node_modules
